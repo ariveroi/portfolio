@@ -53,7 +53,7 @@ const styles = {
   navbar_li: {
     flex: 1,
     textAlign: "center",
-    fontSize: "20px",
+    fontSize: "35px",
     color: "#FFFFFF",
   },
   links: {

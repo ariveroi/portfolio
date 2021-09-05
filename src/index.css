@@ -33,3 +33,23 @@ body {
 a {
   text-decoration: none;
 }
+
+p {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.styled-button {
+  position: "fixed";
+  transition: top 20s;
+  top: 0;
+}
+
+#skills-section-styled-button {
+  position: absolute;
+  background-color: white;
+}
+#skills-section-styled-button.animate {
+  background-color: red;
+  transform: translate(0, 0);
+}

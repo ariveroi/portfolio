@@ -1,23 +1,24 @@
 import React from "react";
-import Container from "./Container";
+import Container from "./common/Container";
 
 import me from "../assets/me.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import github from "../assets/github.svg";
 import linkedIn from "../assets/linkedIn.svg";
 import gmail from "../assets/gmail.svg";
+import Img from "./common/Img";
 
 function Contact() {
   return (
-    <Container next="/contact" prev="/projects">
+    <Container prev="/projects">
       <div style={styles.container}>
         <div style={styles.img_section}>
-          <img style={styles.img} src={me} alt="" />
+          <Img size={500} src={me} alt="" />
         </div>
         <div style={styles.contact_info}>
           <ul style={styles.contact_ul}>
             <li style={styles.contact_li}>
-              <img style={styles.link_img} src={github} alt="" />
+              <Img src={github} alt="" />
               <a
                 href="https://github.com/ariveroi"
                 target="_blank"
@@ -27,7 +28,7 @@ function Contact() {
               </a>
             </li>
             <li style={styles.contact_li}>
-              <img style={styles.link_img} src={linkedIn} alt="" />
+              <Img src={linkedIn} alt="" />
               <a
                 href="https://www.linkedin.com/in/agustin-rivero-ib%C3%A1%C3%B1ez-8635b8a6/"
                 target="_blank"
@@ -37,7 +38,7 @@ function Contact() {
               </a>
             </li>
             <li style={styles.contact_li}>
-              <img style={styles.link_img} src={gmail} alt="" />
+              <Img src={gmail} alt="" />
               <a
                 href="mailto:agusrive96@gmail.com"
                 target="_blank"
@@ -47,7 +48,7 @@ function Contact() {
               </a>
             </li>
             <li style={styles.contact_li}>
-              <img style={styles.link_img} src={whatsapp} alt="" />
+              <Img src={whatsapp} alt="" />
               <a
                 href="https://wa.me/+34628773284?text=mensaje"
                 target="_blank"
