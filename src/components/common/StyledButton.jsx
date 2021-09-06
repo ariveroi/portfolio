@@ -5,6 +5,7 @@ import Title from "./Title";
 function StyledButton(props) {
   const [top, setTop] = useState(props.top);
   const [left, setLeft] = useState(props.left);
+  const [height, setHeight] = useState(100);
   let color = useTheme();
   console.log(color);
   color === "#000" ? (color = "#237D82") : (color = "#fff");
@@ -12,6 +13,7 @@ function StyledButton(props) {
   useEffect(() => {
     setTop(0);
     setLeft(0);
+    setHeight(50);
   }, []);
 
   const styles = {
@@ -27,7 +29,7 @@ function StyledButton(props) {
       padding: "30px",
       backgroundColor: color,
       margin: "15px",
-      height: "100px",
+      height: height + "px",
       zIndex: "2000",
       cursor: "pointer",
       width: props.width,

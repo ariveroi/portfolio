@@ -64,21 +64,11 @@ p {
 
 .movable {
   position: absolute;
-  transition: top 2s, left 2s;
+  transition: top 2s, left 2s, height 2s;
 }
 
 .focusable {
   transition: all 2s;
-}
-
-.sections {
-  opacity: 0;
-  /* position: absolute; */
-}
-
-.sections.show {
-  opacity: 1;
-  transition: all 1s;
 }
 
 /* width */

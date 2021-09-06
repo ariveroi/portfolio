@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Redirect, Route } from "react-router-dom";
 import Settings from "./common/Settings";
 import Background from "./common/Background";
 import Landing from "./Landing";
-import Curriculum from "./Curriculum";
+import Resume from "./Resume";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import BackgroundDark from "./common/BackgroundDark";
@@ -35,7 +35,7 @@ function App() {
           <Redirect to="/intro" />
         </Route>
         <Route exact path="/intro" component={Landing} />
-        <Route exact path="/curriculum" component={Curriculum} />
+        <Route exact path="/curriculum" component={Resume} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/contact" component={Contact} />
         {/* </Switch> */}

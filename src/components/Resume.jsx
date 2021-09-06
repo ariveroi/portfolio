@@ -1,28 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "./common/Container";
 import StyledButton from "./common/StyledButton";
-import skills from "../assets/skills.svg";
-import experience from "../assets/experience.svg";
-import education from "../assets/education.svg";
 import Title from "./common/Title";
-import LargeImage from "./common/LargeImage";
 import Section from "./common/Section";
-import Skills from "./Skills";
+import Skills from "./resume/Skills";
+import Experience from "./resume/Experience";
 
-export default function Curriculum(props) {
+export default function Resume() {
   const [showComponent, setShowComponent] = useState(false);
-  const [show, setShow] = useState("show");
+  const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [top, setTop] = useState(0);
   const [left, setLeft] = useState(0);
   const [width, setWidth] = useState(0);
-  const showSkills = () => {
-    console.log("showSkills");
-  };
 
   const handleClick = (id) => {
-    // setShowComponent(true);
     const doc = document.getElementById(id);
+    setId(id);
     setTop(doc.offsetTop);
     setLeft(doc.offsetLeft);
     setWidth(doc.clientWidth - 60);
@@ -33,7 +27,6 @@ export default function Curriculum(props) {
       ? setTitle("Experience")
       : setTitle("Education");
     setShowComponent(true);
-    setShow("");
   };
 
   return (
@@ -47,15 +40,20 @@ export default function Curriculum(props) {
             width={width}
             click={() => {
               setShowComponent(false);
-              setShow("show");
             }}
           />
           <div style={styles.section}>
-            <Skills />
+            {id === "skills" ? (
+              <Skills />
+            ) : id === "education" ? (
+              <></>
+            ) : (
+              <Experience />
+            )}
           </div>
         </>
       ) : (
-        <div className={`sections ${show}`} style={styles.content}>
+        <div style={styles.content}>
           <Section id="skills" click={() => handleClick("skills")}>
             <Title revert={true}>Skills</Title>
           </Section>
