@@ -43,6 +43,7 @@ function Container(props) {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      justifyContent: "center",
       fontSize: "50px",
     },
   };

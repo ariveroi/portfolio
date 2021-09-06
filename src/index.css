@@ -45,11 +45,60 @@ p {
   top: 0;
 }
 
-#skills-section-styled-button {
+/* #skills-section {
   position: absolute;
-  background-color: white;
+  top: 405px;
+  transition: top 3s cubic-bezier();
+} */
+/* #skills-section.move {
+  transform: translateY(0);
 }
-#skills-section-styled-button.animate {
-  background-color: red;
-  transform: translate(0, 0);
+#experience-section {
+  position: absolute;
+  top: 405px;
+}
+#education-section {
+  position: absolute;
+  top: 405px;
+} */
+
+.movable {
+  position: absolute;
+  transition: top 2s, left 2s;
+}
+
+.focusable {
+  transition: all 2s;
+}
+
+.sections {
+  opacity: 0;
+  /* position: absolute; */
+}
+
+.sections.show {
+  opacity: 1;
+  transition: all 1s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #237d82;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #237d82;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #237d82;
 }

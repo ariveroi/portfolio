@@ -6,6 +6,7 @@ function Text(props) {
   let style = {
     color: color,
     fontSize: props.size || "60px",
+    margin: props.margin,
   };
   return <p style={style}>{props.children}</p>;
 }

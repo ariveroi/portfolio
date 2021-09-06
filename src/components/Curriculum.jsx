@@ -11,51 +11,58 @@ import Skills from "./Skills";
 
 export default function Curriculum(props) {
   const [showComponent, setShowComponent] = useState(false);
-  const [modalDetail, setModalDetail] = useState({ title: "Hello" });
+  const [show, setShow] = useState("show");
+  const [title, setTitle] = useState("");
   const [top, setTop] = useState(0);
   const [left, setLeft] = useState(0);
+  const [width, setWidth] = useState(0);
   const showSkills = () => {
     console.log("showSkills");
   };
 
   const handleClick = (id) => {
-    setShowComponent(true);
+    // setShowComponent(true);
     const doc = document.getElementById(id);
     setTop(doc.offsetTop);
     setLeft(doc.offsetLeft);
-    console.log(doc.offsetLeft, doc.offsetTop);
+    setWidth(doc.clientWidth - 60);
+    console.log(width);
+    id === "skills"
+      ? setTitle("Skills")
+      : id === "experience"
+      ? setTitle("Experience")
+      : setTitle("Education");
+    setShowComponent(true);
+    setShow("");
   };
 
   return (
     <Container next="/projects" prev="/intro">
       {showComponent ? (
-        <div style={styles.section}>
+        <>
           <StyledButton
-            id="skills-section-styled-button"
+            title={title}
             top={top}
             left={left}
+            width={width}
+            click={() => {
+              setShowComponent(false);
+              setShow("show");
+            }}
           />
-
-          <Skills />
-        </div>
+          <div style={styles.section}>
+            <Skills />
+          </div>
+        </>
       ) : (
-        <div style={styles.content}>
-          <Section
-            id="skills-section"
-            click={() => handleClick("skills-section")}
-          >
+        <div className={`sections ${show}`} style={styles.content}>
+          <Section id="skills" click={() => handleClick("skills")}>
             <Title revert={true}>Skills</Title>
           </Section>
-          <Section
-            id="experience-section"
-            click={() => handleClick("experience-section")}
-          >
+          <Section id="experience" click={() => handleClick("experience")}>
             <Title revert={true}>Experience</Title>
           </Section>
-          <Section
-            id="education-section"
-            click={() => handleClick("education-section")}
-          >
+          <Section id="education" click={() => handleClick("education")}>
             {/* <LargeImage src={education} alt="" /> */}
             <Title revert={true}>Education</Title>
           </Section>
@@ -73,7 +80,11 @@ const styles = {
     justifyContent: "space-around",
     alignItems: "center",
   },
-  sections: {
+  section: {
     width: "100%",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import useTheme from "../hooks/useTheme";
-
 function Section(props) {
   let color = useTheme();
   color === "#000" ? (color = "#237D82") : (color = "#fff");
@@ -18,13 +17,14 @@ function Section(props) {
       backgroundColor: color,
       margin: "15px",
       height: "100px",
+      zIndex: "2000",
     },
   };
 
   return (
     <div
       id={props.id}
-      className="focusable"
+      className={`focusable`}
       style={styles.section}
       onClick={props.click}
     >
