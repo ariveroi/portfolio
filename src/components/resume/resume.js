@@ -36,4 +36,21 @@ const experiences = [
   },
 ];
 
-export default experiences;
+const educations = [
+  {
+    job: "Master in Big Data & Bussiness Analytics",
+    time: "September 2020 - Currently",
+    description: "IMF Bussiness School",
+    img: amazon,
+    dark_img: amazon_dark,
+  },
+  {
+    job: "Telecommunications Engineering",
+    time: "September 2014 - July 2020",
+    description: "Universidad Politécnica de Madrid",
+    img: amazon,
+    dark_img: amazon_dark,
+  },
+];
+
+export { experiences, educations };

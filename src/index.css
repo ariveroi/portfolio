@@ -10,7 +10,19 @@ body {
   justify-content: center;
 }
 
-.focusable:hover {
+.section {
+  opacity: 0;
+}
+
+.section.showSection {
+  opacity: 1;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s;
+}
+
+.section:hover {
   cursor: pointer;
 }
 
@@ -19,6 +31,23 @@ body {
 }
 
 .container.loaded {
+  opacity: 1;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s;
+}
+
+.inner-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.inner-container.loaded {
   opacity: 1;
   transition: opacity 2s;
   -webkit-transition: opacity 2s;

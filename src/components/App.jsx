@@ -15,12 +15,6 @@ const ThemeContext = createContext(false);
 function App() {
   const [darkTheme, setTheme] = useState(true);
 
-  // useEffect(() => {
-  //   // darkTheme ? background() : backgroundDark();
-  // }, [darkTheme]);
-
-  console.log(window.screen.height);
-
   const changeTheme = () => {
     setTheme(!darkTheme);
   };

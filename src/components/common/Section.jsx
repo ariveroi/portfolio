@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useTheme from "../hooks/useTheme";
 function Section(props) {
+  const [showSection, setShowSection] = useState("");
+  useEffect(() => {
+    setShowSection("showSection");
+    return () => {
+      setShowSection("");
+    };
+  }, []);
   let color = useTheme();
   color === "#000" ? (color = "#237D82") : (color = "#fff");
 
@@ -24,7 +31,7 @@ function Section(props) {
   return (
     <div
       id={props.id}
-      className={`focusable`}
+      className={`section ${showSection}`}
       style={styles.section}
       onClick={props.click}
     >

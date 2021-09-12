@@ -21,21 +21,17 @@ function Container(props) {
   }, []);
 
   let isMobile = width > 768 ? false : true;
-  console.log(height);
 
   const up = () => {
-    console.log(props.prev);
     history.push(props.prev);
   };
 
   const down = () => {
-    console.log(props.next);
     history.push(props.next);
   };
 
   const styles = {
     container: {
-      // minHeight: "100vh",
       position: "fixed",
       top: 0,
       maxHeight: "100vh",

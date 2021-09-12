@@ -3,22 +3,22 @@ import Job from "../common/Job";
 import Section from "../common/Section";
 import Title from "../common/Title";
 import { ThemeContext } from "../App";
-import { experiences } from "./resume";
+import { educations } from "./resume";
 import InnerContainer from "../common/InnerContainer";
 
-function Experience() {
+function Education() {
   const theme = useContext(ThemeContext);
   const [darkTheme, setDarkTheme] = useState(true);
   // console.log(darkTheme);
-  const experienceList = experiences.map((experience, i) => {
+  const educationList = educations.map((education, i) => {
     if (darkTheme)
       return (
         <Job
           key={i}
-          job={experience.job}
-          time={experience.time}
-          description={experience.description}
-          img={theme ? experience.img : experience.dark_img}
+          job={education.job}
+          time={education.time}
+          description={education.description}
+          img={theme ? education.img : education.dark_img}
           pos={i}
         />
       );
@@ -26,15 +26,18 @@ function Experience() {
   const styles = {
     container: {
       height: "70vh",
-      width: "70%",
-      overflowY: "scroll",
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
     },
   };
   return (
     <InnerContainer>
-      <div style={styles.container}>{experienceList}</div>
+      <div style={styles.container}>{educationList}</div>
     </InnerContainer>
   );
 }
 
-export default Experience;
+export default Education;

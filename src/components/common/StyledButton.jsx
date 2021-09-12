@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import useTheme from "../hooks/useTheme";
-import Title from "./Title";
 
 function StyledButton(props) {
   const [top, setTop] = useState(props.top);
   const [left, setLeft] = useState(props.left);
   const [height, setHeight] = useState(100);
   let color = useTheme();
-  console.log(color);
   color === "#000" ? (color = "#237D82") : (color = "#fff");
-  console.log(color);
   useEffect(() => {
     setTop(0);
     setLeft(0);
@@ -36,15 +33,8 @@ function StyledButton(props) {
     },
   };
   return (
-    <div
-      //   id="skills-section-styled-button"
-
-      //   className="styled-button"
-      className="movable"
-      style={styles.button}
-      onClick={props.click}
-    >
-      <Title revert={true}>{props.title}</Title>
+    <div className="movable" style={styles.button} onClick={props.click}>
+      {props.children}
     </div>
   );
 }

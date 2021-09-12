@@ -5,6 +5,7 @@ import Title from "./common/Title";
 import Section from "./common/Section";
 import Skills from "./resume/Skills";
 import Experience from "./resume/Experience";
+import Education from "./resume/Education";
 
 export default function Resume() {
   const [showComponent, setShowComponent] = useState(false);
@@ -20,7 +21,6 @@ export default function Resume() {
     setTop(doc.offsetTop);
     setLeft(doc.offsetLeft);
     setWidth(doc.clientWidth - 60);
-    console.log(width);
     id === "skills"
       ? setTitle("Skills")
       : id === "experience"
@@ -34,19 +34,20 @@ export default function Resume() {
       {showComponent ? (
         <>
           <StyledButton
-            title={title}
             top={top}
             left={left}
             width={width}
             click={() => {
               setShowComponent(false);
             }}
-          />
+          >
+            <Title revert>{title}</Title>
+          </StyledButton>
           <div style={styles.section}>
             {id === "skills" ? (
               <Skills />
             ) : id === "education" ? (
-              <></>
+              <Education />
             ) : (
               <Experience />
             )}

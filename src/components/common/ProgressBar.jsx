@@ -34,7 +34,7 @@ function ProgressBar(props) {
       <div style={styles.progress}>
         <div style={styles.fill}></div>
       </div>
-      <Text size={10}>{props.fill}%</Text>
+      <Text size={10}>Expertise ({props.fill}%)</Text>
     </div>
   );
 }

@@ -13,6 +13,8 @@ function Job(props) {
       width: "100%",
       display: "flex",
       flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
       marginRight: "3px",
     },
     img_container: {
