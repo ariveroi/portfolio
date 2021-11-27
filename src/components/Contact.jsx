@@ -13,7 +13,7 @@ function Contact() {
     <Container prev="/projects">
       <div style={styles.container}>
         <div style={styles.img_section}>
-          <Img size={500} src={me} alt="" />
+          <Img me size={400} src={me} alt="" />
         </div>
         <div style={styles.contact_info}>
           <ul style={styles.contact_ul}>

@@ -1,14 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Job from "../common/Job";
-import Section from "../common/Section";
-import Title from "../common/Title";
 import { ThemeContext } from "../App";
 import { educations } from "./resume";
 import InnerContainer from "../common/InnerContainer";
 
 function Education() {
   const theme = useContext(ThemeContext);
-  const [darkTheme, setDarkTheme] = useState(true);
+  const darkTheme = true;
   // console.log(darkTheme);
   const educationList = educations.map((education, i) => {
     if (darkTheme)
@@ -22,6 +20,7 @@ function Education() {
           pos={i}
         />
       );
+    else return <></>;
   });
   const styles = {
     container: {

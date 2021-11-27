@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./scrollUp.css";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "../../App";
 
 function ScrollUp(props) {
   const [theme, setTheme] = useState("light");
@@ -13,7 +13,7 @@ function ScrollUp(props) {
       <div className={`chevronUp ${theme}`}></div>
       <div className={`chevronUp ${theme}`}></div>
       <div className={`chevronUp ${theme}`}></div>
-      <span className={`text-sc ${theme}`}>Click me</span>
+      <span className={`text-sc ${theme}`}>Previous</span>
     </div>
   );
 }

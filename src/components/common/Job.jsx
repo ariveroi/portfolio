@@ -1,9 +1,6 @@
 import React from "react";
-import Title from "./Title";
 import Text from "./Text";
 import Img from "./Img";
-
-import amazon from "../../assets/amazon.svg";
 
 function Job(props) {
   let left = props.pos % 2 === 0 ? true : false;

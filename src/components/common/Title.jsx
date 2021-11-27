@@ -5,6 +5,7 @@ function Title({ revert = false, children }) {
   const color = useTheme(revert);
   let style = {
     color: color,
+    margin: "0",
   };
   return <h4 style={style}>{children}</h4>;
 }

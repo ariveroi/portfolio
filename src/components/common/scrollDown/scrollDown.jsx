@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./scrollDown.css";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "../../App";
 
 function ScrollDown(props) {
   const [theme, setTheme] = useState("light");
@@ -13,7 +13,7 @@ function ScrollDown(props) {
       <div className={`chevronDown ${theme}`}></div>
       <div className={`chevronDown ${theme}`}></div>
       <div className={`chevronDown ${theme}`}></div>
-      <span className={`text-sc ${theme}`}>Click me</span>
+      <span className={`text-sc ${theme}`}>Next</span>
     </div>
   );
 }

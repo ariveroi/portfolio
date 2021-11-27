@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import useWindowsSize from "../hooks/useWindowsSize";
+//import useWindowsSize from "../hooks/useWindowsSize";
 
 function BackgroundDark() {
-  const { width, height } = useWindowsSize();
+  //const { width, height } = useWindowsSize();
   useEffect(() => {
     background();
   }, []);

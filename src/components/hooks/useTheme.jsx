@@ -10,7 +10,7 @@ function useTheme(reverse = false) {
     } else {
       darkTheme ? setTheme("#fff") : setTheme("#000");
     }
-  }, [darkTheme]);
+  }, [darkTheme, reverse]);
   return theme;
 }
 

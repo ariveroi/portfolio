@@ -1,16 +1,14 @@
-import React, { useEffect, useState, useContext } from "react";
-import { ThemeContext } from "../App";
-import Navbar from "./Navbar";
+import React, { useEffect, useState } from "react";
 import ScrollDown from "../scrollDown/scrollDown";
-import ScrollUp from "../scrollUp/scrollUp";
+import ScrollUp from "./scrollUp/scrollUp";
 
 import { useHistory } from "react-router-dom";
-import useWindowsSize from "../hooks/useWindowsSize";
+//import useWindowsSize from "../hooks/useWindowsSize";
 
 function Container(props) {
   const history = useHistory();
   const [loaded, setLoaded] = useState("");
-  const { width, height } = useWindowsSize();
+  //const { width, height } = useWindowsSize();
 
   useEffect(() => {
     setLoaded("loaded");
@@ -20,7 +18,7 @@ function Container(props) {
     };
   }, []);
 
-  let isMobile = width > 768 ? false : true;
+  //let isMobile = width > 768 ? false : true;
 
   const up = () => {
     history.push(props.prev);

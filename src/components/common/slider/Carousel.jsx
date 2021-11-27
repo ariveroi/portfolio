@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Carousel.scss";
+
+import flappy_bird from "../../assets/flappy_bird.svg";
+import padle from "../../assets/padle.svg";
 import img from "../../assets/rectangle.svg";
+import lalberca from "../../assets/lalberca.svg";
+import lwq from "../../assets/lwq.svg";
+
 import elements from "./elements";
 import Title from "../common/Title";
 import Text from "../common/Text";
+import Tags from "../common/Tags";
 
-const imgs = [img, img, img];
+const imgs = [flappy_bird, padle, lwq, lalberca];
 const delay = 8500;
 
 const Carousel = () => {
@@ -40,6 +47,7 @@ const Carousel = () => {
     slideImg: {
       flex: 1,
       height: "500px",
+      width: "500px",
     },
     slideText: {
       flex: 1,
@@ -83,9 +91,11 @@ const Carousel = () => {
           <Text size={20} style={{ fontSize: "20px" }}>
             {element.link}
           </Text>
+          <Text size={20}>Status: {element.status || "WIP"}</Text>
           <Text size={30} style={styles.slideP}>
             {element.description}
           </Text>
+          <Tags tags={element.tags} />
         </div>
       </div>
     </div>
@@ -94,21 +104,16 @@ const Carousel = () => {
   return (
     <>
       <div style={styles.slideshow}>
-        <div style={styles.slideshowSlider}>
-          {/* {imgs.map((img, idx) => (
-            <img style={styles.slide} key={idx} src={img} alt="perro" />
-          ))} */}
-          {elementsList}
-        </div>
+        <div style={styles.slideshowSlider}>{elementsList}</div>
         <div style={styles.slideshowImgs}>
-          {imgs.map((_, idx) => (
+          {imgs.map((_img, idx) => (
             <img
               key={idx}
               className={`slideshowDot${index === idx ? " active" : ""}`}
               onClick={() => {
                 setIndex(idx);
               }}
-              src={img}
+              src={_img}
               alt=""
             />
           ))}

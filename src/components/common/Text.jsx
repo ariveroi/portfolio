@@ -7,6 +7,7 @@ function Text(props) {
     color: color,
     fontSize: props.size || "60px",
     margin: props.margin,
+    wordBreak: "break-word",
   };
   return <p style={style}>{props.children}</p>;
 }

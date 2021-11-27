@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Container from "./common/Container";
 import StyledButton from "./common/StyledButton";
 import Title from "./common/Title";
