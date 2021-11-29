@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./scrollUp.css";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../laptop/LaptopApp";
 
 function ScrollUp(props) {
   const [theme, setTheme] = useState("light");

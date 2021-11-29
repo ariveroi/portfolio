@@ -1,12 +1,12 @@
 import React from "react";
-import Container from "./common/Container";
+import Container from "../common/Container";
 
-import me from "../assets/me.svg";
-import whatsapp from "../assets/whatsapp.svg";
-import github from "../assets/github.svg";
-import linkedIn from "../assets/linkedIn.svg";
-import gmail from "../assets/gmail.svg";
-import Img from "./common/Img";
+import me from "../../assets/me.svg";
+import whatsapp from "../../assets/whatsapp.png";
+import github from "../../assets/github.png";
+import linkedIn from "../../assets/linkedin.png";
+import gmail from "../../assets/gmail.png";
+import Img from "../common/Img";
 
 function Contact() {
   return (

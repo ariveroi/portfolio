@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "../laptop/LaptopApp";
 
 function useTheme(reverse = false) {
   const darkTheme = useContext(ThemeContext);

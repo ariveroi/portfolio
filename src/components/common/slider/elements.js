@@ -1,7 +1,7 @@
-import flappy_bird from "../../assets/flappy_bird.svg";
-import padle from "../../assets/padle.svg";
-import lwq from "../../assets/lwq.svg";
-import lalberca from "../../assets/lalberca.svg";
+import flappy_bird from "../../../assets/flappy_bird.svg";
+import padle from "../../../assets/padle.svg";
+import lwq from "../../../assets/lwq.svg";
+import lalberca from "../../../assets/lalberca.svg";
 
 const elements = [
   {

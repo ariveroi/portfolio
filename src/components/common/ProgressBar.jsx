@@ -14,7 +14,7 @@ function ProgressBar(props) {
       marginRight: "30px",
     },
     progress: {
-      width: "400px",
+      width: props.mobile ? "70vw" : "400px",
       height: "10px",
       borderRadius: "20px",
       border: `1px solid #237D82`,

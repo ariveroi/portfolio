@@ -1,9 +1,9 @@
 import React from "react";
-import ProgressBar from "../common/ProgressBar";
-import Text from "../common/Text";
-import { sw_skills, soft_skills } from "../common/skills";
-import Title from "../common/Title";
-import InnerContainer from "../common/InnerContainer";
+import ProgressBar from "../../common/ProgressBar";
+import Text from "../../common/Text";
+import { sw_skills, soft_skills } from "../../common/skills";
+import Title from "../../common/Title";
+import InnerContainer from "../../common/InnerContainer";
 const size = 20;
 
 const sw_skillList = sw_skills.map((skill, i) => (

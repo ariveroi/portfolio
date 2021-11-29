@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Carousel.scss";
 
-import flappy_bird from "../../assets/flappy_bird.svg";
-import padle from "../../assets/padle.svg";
-import img from "../../assets/rectangle.svg";
-import lalberca from "../../assets/lalberca.svg";
-import lwq from "../../assets/lwq.svg";
+import flappy_bird from "../../../assets/flappy_bird.svg";
+import padle from "../../../assets/padle.svg";
+import lalberca from "../../../assets/lalberca.svg";
+import lwq from "../../../assets/lwq.svg";
 
 import elements from "./elements";
-import Title from "../common/Title";
-import Text from "../common/Text";
-import Tags from "../common/Tags";
+import Title from "../Title";
+import Text from "../Text";
+import Tags from "../Tags";
 
 const imgs = [flappy_bird, padle, lwq, lalberca];
 const delay = 8500;

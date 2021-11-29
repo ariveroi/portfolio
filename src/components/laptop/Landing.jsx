@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./common/Container";
-import Text from "./common/Text";
+import Container from "../common/Container";
+import Text from "../common/Text";
 
 export default function Landing(props) {
   const goNext = () => {

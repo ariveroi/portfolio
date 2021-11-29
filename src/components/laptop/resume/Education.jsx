@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import Job from "../common/Job";
-import { ThemeContext } from "../App";
+import Job from "../../common/Job";
+import { ThemeContext } from "../LaptopApp";
 import { educations } from "./resume";
-import InnerContainer from "../common/InnerContainer";
+import InnerContainer from "../../common/InnerContainer";
 
 function Education() {
   const theme = useContext(ThemeContext);

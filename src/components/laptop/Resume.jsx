@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Container from "./common/Container";
-import StyledButton from "./common/StyledButton";
-import Title from "./common/Title";
-import Section from "./common/Section";
+import Container from "../common/Container";
+import StyledButton from "../common/StyledButton";
+import Title from "../common/Title";
+import Section from "../common/Section";
 import Skills from "./resume/Skills";
 import Experience from "./resume/Experience";
 import Education from "./resume/Education";

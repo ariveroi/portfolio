@@ -20,10 +20,10 @@ function Section(props) {
       justifyContent: "center",
       boxShadow: `2px 2px 2px ${color}`,
       borderRadius: "30px",
-      padding: "30px",
+      padding: props.size ? "0px" : "30px",
       backgroundColor: color,
-      margin: "15px",
-      height: "100px",
+      margin: props.size ? "50px" : "15px",
+      height: props.size ? "50px" : "100px",
       zIndex: "2000",
     },
   };

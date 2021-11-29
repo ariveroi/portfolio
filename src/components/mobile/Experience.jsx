@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
-import Job from "../common/Job";
-import { ThemeContext } from "../App";
-import { experiences } from "./resume";
-import InnerContainer from "../common/InnerContainer";
+import React from "react";
+import Job from "./Job";
+import { experiences } from "./resume.js";
 
 function Experience() {
-  const theme = useContext(ThemeContext);
   const darkTheme = true;
   // console.log(darkTheme);
   const experienceList = experiences.map((experience, i) => {
@@ -16,7 +13,7 @@ function Experience() {
           job={experience.job}
           time={experience.time}
           description={experience.description}
-          img={theme ? experience.img : experience.dark_img}
+          img={experience.dark_img}
           pos={i}
         />
       );
@@ -24,15 +21,19 @@ function Experience() {
   });
   const styles = {
     container: {
-      height: "70vh",
-      width: "70%",
+      //height: "fit-content",
+      height: "100vh",
+      width: "95%",
       overflowY: "scroll",
+      display: "flex",
+      flexDirection: "column",
+      margin: "auto",
     },
   };
   return (
-    <InnerContainer>
+    <div>
       <div style={styles.container}>{experienceList}</div>
-    </InnerContainer>
+    </div>
   );
 }
 

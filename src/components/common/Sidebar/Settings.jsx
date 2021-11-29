@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { ThemeContext } from "../../App";
-import { IoSettingsOutline } from "react-icons/io5";
+import { ThemeContext } from "../../laptop/LaptopApp";
+import * as AiIcons from "react-icons/ai";
 
 import Sidebar from "./Sidebar";
 
@@ -16,56 +16,44 @@ function Settings(props) {
       padding: 0,
       zIndex: 10001,
       height: "3vh",
-      width: "3vw",
-      WebkitTransition: "width 1s, background 1s",
+      width: props.mobile ? "10vw" : "3vw",
     },
     container: {
       position: "fixed",
       right: 0,
       margin: 0,
-      padding: 0,
-      zIndex: 10001,
-      backgroundColor: darkTheme ? "#fff" : "#237D82",
-      width: "400px",
-      height: "20vh",
-      borderBottomLeftRadius: "30px",
-      WebkitTransition: "width 1s, background 1s",
+      zIndex: 2,
+      backgroundColor: "grey",
+      opacity: "0.3",
+      width: "100vw",
+      height: "100vh",
     },
   };
 
   return (
     <div
       //onClick={props.click}
-      style={show ? style.container : style.containerHidden}
+      style={show ? {} : style.containerHidden}
     >
       {show ? (
-        <Sidebar
-          theme={darkTheme}
-          changeTheme={props.click}
-          onClick={() => setShow(!show)}
-        />
+        <>
+          {/* <div style={style.container} onClick={() => setShow(false)}></div> */}
+          <Sidebar
+            mobile={props.mobile}
+            theme={darkTheme}
+            changeTheme={props.click}
+            click={() => setShow(!show)}
+          />
+        </>
       ) : (
-        <IoSettingsOutline
+        <AiIcons.AiOutlineMenu
           size={30}
-          color={darkTheme ? "#fff" : "#000"}
+          color={darkTheme ? "#fff" : "#237d82"}
           onClick={() => setShow(!show)}
-          style={
-            darkTheme
-              ? { backgroundColor: "#000", cursor: "pointer" }
-              : { backgroundColor: "#fff", cursor: "pointer" }
-          }
         />
       )}
     </div>
   );
 }
-
-// const style = {
-//   zIndex: 10001,
-//   position: "absolute",
-//   right: 0,
-//   cursor: "pointer",
-//   margin: "5px",
-// };
 
 export default Settings;

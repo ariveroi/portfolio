@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./common/Container";
-import Carousel from "./slider/Carousel";
+import Container from "../common/Container";
+import Carousel from "../common/slider/Carousel";
 
 function Projects() {
   return (

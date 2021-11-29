@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ScrollDown from "../scrollDown/scrollDown";
+import ScrollDown from "./scrollDown/scrollDown";
 import ScrollUp from "./scrollUp/scrollUp";
 
 import { useHistory } from "react-router-dom";
